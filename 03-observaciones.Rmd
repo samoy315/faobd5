@@ -1,0 +1,299 @@
+# Observaciones sobr los datos {-}
+
+##### III. Observaciones realizadas a los datos proporcionados por los diferentes países (Argentina, Colombia, Costa Rica, Nicaragua, Paraguay, Uruguay y Venezuela). {-}
+
+### Generales {-}
+
+En esta sección se mostrarán las principales observaciones sobre los datos de las prácticas de manejo sostenible de suelos y aguas (PMSSA) obtenidos por países, con la finalidad de afinar la recolección de nueva información, la cual será incorporada en la base de datos (BD) y con esto garantizar una funcionalidad completa. 
+
+* **Revisar y normalizar el formatos de los campos**
+  * **Campos tipo fechas:** este formato debe ser uniforme para la introducción de la información por parte de los países, ejemplo dd-mm-aaaa o dd/mm/aaaa o mm-dd-aaaa o mm/dd/aaaa, dependiendo del motor de bases de datos que se utilizará para gestionar la BD. Podría emplearse herramientas de calendarios para ayudar a la introducción de información.
+  * **Campos tipo Moneda:** establecer el formato y una única unidad monetaria a considerar (USD$ o euro), esto será empleado en los campos de “Presupuestos” del proyecto y “Costos de instalación y mantenimiento” de las PMSSA. 
+  * **Mayúsculas o minúsculas:** Normalizar el uso de mayúsculas y minúsculas en los datos proporcionados, ya que es frecuente encontrar una misma palabra toda en mayúsculas o toda en minúsculas o con la primera letra en mayúscula y el resto en minúsculas. Esto puede traer problemas en futuras consultas y no es estéticamente adecuado.
+  * **Información Telefónica:**  Sería positivo encontrar una manera de homologar (en la medida de lo posible) el formato de los campos relacionados a números telefónicos, ya que presentan mucha variedad de símbolos como paréntesis “()”, guiones “-”, espacios vacíos “ “, signos de suma (plus +) entre otros. Es conocido que existen variaciones entre el formato telefónico de los países, pero sí se puede eliminar estos símbolos, quizás empleando algún tipo de máscara. En cuanto al número se puede emplear códigos internacionales más el formato nacional. Ejemplo: Código país + código telefónico + número particular. 
+  * **Acentos:** Sería positivo no emplear acentos en las palabras (en la medida de lo posible).
+  * **Campos de correo:** Normalizar el formato de introducción de la información de correo, ya que en oportunidades viene subrayado como un enlace externo.
+  * **Campos numéricos:** Normalizar el formato numérico en cuanto a su tipo (entero, decimal, simple, doble) según sea el caso, la cantidad de decimales y la separación de miles. Además verificar que la separación de decimales sea por puntos (.) y no coma (,).
+  
+<br> 
+
+* **Detalles en opciones de “Listas” empleadas para rellenar la información de campos:**
+  * Normalizar en una lista las posibles siglas de los proyectos FAO, si se considera pertinente.
+  * Se presentaron detalles en la redacción en las opciones de las listas como: falta de orden alfabético; opciones que inician en mayúsculas en algunos casos y en otros no, y opciones que inician con signos “>” (ejemplo campo “Temporada principal Cultivo/pasto sembrado”) de la información de actividades agrícolas.
+  * Corregir redacción de las opciones de listas. Ejemplo en los campos “Tipo Climático (IPCC)” y  “Clase de Textura de Suelo Superficial (general)”.
+  * Algunas listas de opciones están rellenas con frases donde las palabras se separan por espacios “ “ y en otras con guiones bajos “_”, sería positivo homologar.
+  * Homologar todas las listas en un solo idioma, algunas están en inglés y otras en castellano. Ejemplo la opción “Otros” puede aparecer en castellano y en otras en inglés.
+  * Homologar en una lista las opciones posibles del campo “Método de Productividad de Suelo”.
+  * En la lista de opciones del campo “Clase de Uso de la Tierra (específico)” aparecen tanto “pastizales” como “pastizales permanente”, lo cual es muy similar.
+
+<br>
+
+* Evitar el uso de diversos símbolos o siglas en los casos de carencia de información. Fue típico encontrar: “NA”, “N/A”, - - - , “x”, 0 o espacios vacíos. Sería positivo emplear uno solo siempre y explicar cuándo sería pertinente aplicar el “no aplica (NA)” o solo dejar el campo vacío.
+* Sería conveniente agregar un campo al formulario de captura de información donde se solicite la superficie del nivel de abstracción “Campo”, ya que actualmente no posee.
+* Analizar la posibilidad de incluir la clase de los suelos según Soil taxonomy (USDA), debido a que es de uso frecuente por algunos países de la región.
+* Sería conveniente determinar la clase textural de los suelos, empleando los porcentajes de arena, limo y arcilla, usando el triángulo textural o un código R. Así se evitarían posibles contradicciones con respecto al campo “Clase de Textura de Suelo Superficial (específica)” solicitado mediante opciones listadas.
+* Asegurarse que el valor del campo “Pendiente Media” esté dentro de los valores preestablecidos en el campo “Clase de Pendiente Predominante”.
+* En la lista del campo de “Clase de Textura de Suelo Superficial (general)” parece que faltara la opción “arcillosa gruesa”, si existe el caso.
+*Aclarar los posibles términos análogos a las divisiones de 1er y 2do orden como son “Provincias”, “Estados” y “Departamentos” (1er orden), y “Municipios” (2do orden), ya que existe cierta confusión entre estos términos.
+* Incorporar para los diferentes niveles de abstracción (Proyectos, Fincas, Campos, Unidades de evaluación y Muestras) en sus respectivas tablas, Campos únicos que podrían ser considerados Campos claves y sirvan para crear las relaciones entre las diferentes tablas. Esto se justifica porque actualmente pueden existir niveles (ejemplo: Fincas y Campos) con el mismo nombre en el país y entre países.
+* Cual seria la razón que en los campos “Forma de terreno” y “Posición predominante” existan las mismas opciones en su lista.
+Homologar todas las coordenadas en el Sistema de coordenadas geográficas, en unidades de grado decimal con datum WGS84.
+* Se recomienda la adición de un campo para indicar el organismo empleado para determinar la información de “Diversidad o Calidad Biológica del Suelo-índice, Shannon”, ya que los organismos varían según el empleado por cada país, como por ejemplo: artrópodos, nematodos, macrofauna, etc.
+* Es frecuente encontrar que las coordenadas de las muestras se repiten (coordenadas, fecha y profundidad), duplicando información de indicadores en la misma ubicación.
+
+---
+
+**A continuación se describen las observaciones a los datos particulares de cada país.**
+
+### Argentina {-}
+
+##### Datos Generales del Proyecto: {-}
+* Falta información sobre:
+  * Superficie de proyecto, número de agricultores y técnicos.
+  * Teléfono y dirección de persona contacto.
+
+##### Datos Generales de la Finca:{-}
+* No presentó superficie en 12 de las 13 fincas.
+* Falta información de división administrativas, miembros, participación y rol de la mujer, nombres y apellidos, dirección, correo, teléfono del responsable de la finca.
+* Aparece la opción “Otros” en el campo de “Tenencia”.
+
+##### Datos de Fincas, Campos y Unidades de Evaluación: {-}
+* No se identificaron las Unidades de Evaluación.
+* Las Unidades de Evaluación no poseen coordenadas.
+* Falta información de superficies de Campos y Unidades de Evaluación.
+* Falta información en los campos sobre el paisaje (Pendiente media, Forma de terreno predominante y posición predominante).
+* Falta información sobre el porcentaje de Arcilla, Limo y Arena.
+
+##### Datos de Actividad Agrícola: {-}
+* No se identificó las Unidades de Evaluación.
+* La Finca “EEA INTA Abra Pampa” está dividida en dos campos (INTA y JS), según hoja de cálculo de Datos de Fincas, Campos y UEs, pero en las Actividades agrícolas no se diferencian.
+* Las Fincas “Olivares” se dividen en dos campos pero no se identifican diferenciados y sus coordenadas son las mismas. Si existen diferencias de cultivos y de Práctica de manejo.
+* Las Fincas “SAA” se dividen en dos campos pero no se identifican diferenciados y sus coordenadas son las mismas. Si existen diferencias de cultivos (Vicia y trigo) pero no se colocó en el campo correspondiente (Temporada principal Cultivo/pasto sembrado (tierras de cultivo)), si no en las observaciones.
+* Aparece la opción “Otros” en los campos “Sistema de Uso” y “Pastos principales”.
+* Son frecuentes los “NA” en la mayoría de los campos.
+
+##### Datos de Actividad Ganadera: {-}
+* Aparece la opción “Otros” en el campo “Tipo de Animal (IPCC )”.
+* La Finca “EEA INTA Abra Pampa” está separada en dos campos, porque poseen dos tipos de animales, Vicuñas en uno, y Ovinos y Llamas en el otro, sin embargo la actividad ganadera está relacionada con el nivel de abstracción Finca. Sugerimos cambiarlo a nivel de campos.
+* El número de cabezas (rebaño inicial y final) es fraccionado y no entero.
+
+##### Resultados de Indicadores: {-}
+* No se identificaron los Campos o Lotes y tampoco las Unidades de Evaluación.
+* No hay diferencias en la identificación de cada muestras (ID Muestra), todas son valor 1.
+* Colocó algunos registros “Sin Datos”en los campos “Valor de la Productividad del Suelo (PS)” y “Valor de Respiración de Suelos (RS)”.
+* Introduce caracteres textuales en el campo “Abundancia de Macrofauna (TSBF/ISO)” en lugar de datos numéricos, alterando el formato del campo.
+
+---
+
+### Colombia {-}
+
+##### Datos Generales del Proyecto: {-}
+* Presentó problemas con la fecha de inicio de proyecto.
+* Nombre del tipo de proyecto demasiado largo.
+* Deben evitarse el uso de valores “X” en campos vacíos.
+* No presentó información de superficies, número de agricultores y técnicos, ni socios.
+
+##### Datos Generales de la Finca: {-}
+* Aparece la opción “Otros” en campo “Sistema de la Finca”.
+* Deben evitarse el uso de valores “X” en campos vacíos.
+* Datos de Fincas, Campos y Unidades de Evaluación:
+* Las coordenadas de los Campos y Unidades de Evaluación son las mismas.
+* Falta información de Evapotranspiración ETO y de texturas de los suelos.
+
+##### Datos de Actividad Agrícola: {-}
+* Se invirtieron las identificaciones de Campos y Unidades de Evaluación, lo que puede traer problemas en las relaciones de la Base de Datos.
+* Campo de “Sistema de Uso de  la Tierra” vacío.
+“NA” en todos los “Sistema de Uso de  la Tierra”.
+* Aparece la opción “Otros” en los campos “Sistema agrícola” y “Pastos principales”.
+* Colombia sugiere incluir el pasto “Kikuyo” ya que no está disponible en la lista de opciones del campo “Principales pastos”
+
+##### Datos de Actividad Ganadera: {-}
+* Sin observaciones.
+
+##### Resultados de Indicadores: {-}
+* No hay diferencias en la identificación de cada muestras (ID Muestra), todas son valor 1.
+* Falta fecha de muestreo.
+* Deben evitarse el uso de valores “ND” en campos vacíos.
+
+---
+
+### Costa Rica {-}
+
+##### Datos Generales del Proyecto: {-}
+Deben evitarse el uso de valores “X” en campos vacíos.
+No tiene fecha de finalización del proyecto
+Homologar formato de número telefónico y eliminar los paréntesis
+
+##### Datos Generales de la Finca: {-}
+* Aparece la opción “Otros” en campo “Sistema de Fincas”.
+* Coloca varias personas en un mismo campo de responsable de la finca.
+* Emplea rango (72 - 74) en campo de edad del responsable de la finca, eso convierte el formato del campo de tipo numérico a texto, imposibilitando la realización de cálculos
+* Las coordenadas en grados decimal contienen caracteres tipo textos al final, lo que convierte el formato del campo de tipo numérico a texto, imposibilitando la realización de cálculos y transformaciones.
+* Modificaron la lista del campo “Rol de la mujer” para colocar la opción “Todas las anteriores”.
+* En campo género presentan los dos sexos.
+* El correo del responsable se ubicó en el campo de dirección postal.
+
+##### Datos de Fincas, Campos y Unidades de Evaluación: {-}
+* La identificación y Coordenadas de los Campos y Unidades de Evaluación  son similares.
+* Caracteres textuales en la coordenadas, que cambian el formato y comprometen futuros cálculos.
+* Cambios en los elementos de la lista de opciones del campo “Forma de Terrenos”.
+* Falta información de clima: Precipitación, temperaturas y ETO.
+* Falta información de porcentajes de Arcillas y Limos.
+
+##### Datos de Actividad Agrícola: {-}
+* Adicionaron 3 campos más sobre prácticas de manejo.
+* Coloca caracteres textuales en el campo “Costo de  Mantenimiento de la Práctica 1”, lo que altera el tipo de formato y compromete los futuros cálculos.
+* En el campo “Periodicidad del Fuego” no colocan años como pide  la unidad de este campo, sino comentarios textuales.
+* Faltaron datos de la Finca 16.
+* Aparece la opción “Otros” en los campos “Sistema de Uso de la Tierra”, “Sistema Agrícola” y “PMSS3”, “Temporada”, “Principales pastos y árboles”.
+
+##### Datos de Actividad Ganadera: {-}
+* Deben evitarse el uso de diferentes opciones de “NA” y “N/A” en los campos vacíos.
+* Diferencias en la identificación de las Fincas entre las hojas de cálculo excel, ejemplo F1  <>  Finca 1.
+
+##### Resultados de Indicadores: {-}
+* Diferencias en la identificación de las Fincas entre las hojas de cálculo excel, ejemplo F1  <>  Finca 1.
+* Formato del campo fecha no adecuado.
+* Introduce valores textuales en el campo “Valor de la Productividad del Suelo (PS)”, el cual debe ser numérico. Esto cambia el tipo de formato a texto y no permitirá cálculos, ni armonización con los datos del resto de países.
+* Aparece la opción “Otros” en el campo “Método de DA”.
+* Fataria homologar los decimales en los valores de un mismo campo numérico.
+* Adicionaron una gran cantidad de campos nuevos.
+* Falta información de Conductividad Eléctrica.
+
+---
+
+### Nicaragua {-}
+
+##### Datos Generales del Proyecto: {-}
+* La hoja de “Datos Generales del Proyecto” no es igual a las de otros países, no tiene el campo de correo de los socios.
+* Formato de números telefónico son diferentes, deberían ser homologados
+Deben evitarse el uso de valores “X” en campos vacíos.
+* Adicionaron y eliminaron algunos campos, lo que impide uniformidad en las tablas. 
+
+##### Datos Generales de la Finca: {-}
+* Empleo “Manzana como unidad de superficies” en lugar de hectáreas.
+* Faltó indicar en qué sistema de proyección cartográfica están las coordenadas, por ejemplo indicar Sistema de coordenadas, unidad, datum, proyección cartográfica y Huso o Zona, si es el caso.
+* Adicionaron, modificaron y eliminaron algunos campos, lo que impide la uniformidad de sus tablas con las de otros países.
+
+##### Datos de Fincas, Campos y Unidades de Evaluación: {-}
+* Eliminaron el campo de identificación de los Campos o Lotes, sólo identificaron las * Unidades de Evaluación, pero colocaron las coordenadas de los campos.
+* Empleo “Manzana como unidad de superficies” en lugar de hectáreas.
+* Faltó indicar en qué sistema de proyección cartográfica están las coordenadas, por ejemplo indicar Sistema de coordenadas, unidad, datum, proyección cartográfica y Huso o Zona, si es el caso
+* Adicionaron, modificaron y eliminaron algunos campos, lo que impide la uniformidad de sus tablas con las de otros países.
+* Aparece la opción “Otros” en campo “Posición predominante”.
+* Colocaron rangos en el campo de temperaturas y eso afecta el tipo de campo, imposibilitando futuros cálculos.
+* En el campo observaciones sugieren adicionar otras clases fisiográficas como: Suelos de laderas, Suelos planos donde se cultiva y Suelos de propiedades vérticas.
+
+##### Datos de Actividad Agrícola: {-}
+* Problemas con la identificación empleada para las Fincas, Campos y Unidades de Evaluación (confuso).
+* Aparece la opción “Otros” en los campos “Sistema agrícola”, “Pastos principales”, PMSS2.
+
+##### Datos de Actividad Ganadera: {-}
+* No presentó información.
+
+##### Resultados de Indicadores: {-}
+* Formatos del campo de fecha inadecuados.
+* Introduce los valores de Valor de la Productividad del Suelo (PS) junto a las unidades (texto) alterando el formato del campo.
+* Aparece la opción “Otros” en el campo “Método de DA”.
+* Deben evitarse el uso de valores “0” en campos vacíos.
+* En la Conductividad Eléctrica creemos que la unidad no es dS/m.
+* En la Infiltración de agua creemos que la unidad de cm/h.
+* En el campo “Calidad Biológica del Suelo-índice de Artrópodos  (QBS-ar) Shannon” emplean artrópodos y otros países lo hacen con Nematodos, macrofauna, etc.
+
+---
+
+### Paraguay {-}
+
+##### Datos Generales del Proyecto: {-}
+* Deben evitarse el uso de valores “X” en campos vacíos.
+* No presentó información de socios.
+
+##### Datos Generales de la Finca: {-}
+* Modificaron la lista del campo de “Tenencia de la Tierra” para incluir “Adquisición hereditaria”.
+* Falta información del responsable de la finca.
+* Deben evitarse el uso de valores “X” en campos vacíos.
+
+##### Datos de Fincas, Campos y Unidades de Evaluación: {-}
+* Deben evitarse el uso de valores “=” en campos.
+* Nombre de los campos o lotes demasiado largos.
+
+##### Datos de Actividad Agrícola: {-}
+* Cambiaron la manera de identificar las Fincas y Campos entre las diferentes hojas de cálculo excel.
+* Aparece la opción “Otros” en los campos “Sistema de Uso de la Tierra”, “Sistema agrícola”.
+* Deben evitarse el uso de valores “-” en campos vacíos.
+
+##### Datos de Actividad Ganadera: {-}
+* Aparece información de Ecuador.
+* Diferencias en la identificación de las Fincas entre las hojas de cálculo excel, ejemplo Finca Victor Ramirez <> Farm_A  <>  Finca_A.
+
+##### Resultados de Indicadores: {-}
+* Colocaron el nombre de los campos o lotes en el campo de identificación de las Fincas.
+* Formato de campo ”Fecha de Muestreo” inadecuado.
+* Aparece la opción “Otros” en el campo “Método de DA”.
+* Falta información de Conductividad Eléctrica.
+
+---
+
+### Uruguay {-}
+
+##### Datos Generales del Proyecto: {-}
+* Deben evitarse el uso de valores “X” en campos vacíos.
+
+##### Datos Generales de la Finca: {-}
+* Deben evitarse el uso de valores “X” en campos vacíos.
+* Deben evitarse el uso de valores “---” en campos vacíos.
+* Aparece la opción “Otros” en campo “Sistema de la Finca”.
+* Sugerencias de Uruguay para la hoja de Fincas:
+  * En campo Sistema de fincas agregar: Ganadería en todas sus categorías y Agricultura Educación/investigación y Ganadería Educación/investigación.
+En el campo “Participación de la mujer: Toma de decisiones (manejo rodeo, alimentación, sanidad, sistema gestión): mujer; Actividades en tambo: hombres; Actividades a campo: hombres y mujeres; Actividades de gabinete (informes de gestión, investigaciones): mujer; Asesoramiento técnico (que se siembra, cuando, manejo cultivos): hombres; Muestreos para el piloto (toma de muestras): hombres y mujeres.
+
+##### Datos de Fincas, Campos y Unidades de Evaluacion: {-}
+* Faltó información de coordenadas de las Unidades de Evaluación..
+* Deben evitarse el uso de valores “---” en campos vacíos.
+* Aparece la opción “Otros” en campo “Forma de terreno predominante”.
+* Incorporaron sugerencias como:
+  * Agregar a “Forma de Terreno predominante” : Las Tierras bajas levemente onduladas y Sierras.
+* Mencionan que les hizo falta algunos campos como el de “Clase de textura de suelos superficial - General”.
+
+##### Datos de Actividad Agrícola: {-}
+* Deben evitarse el uso de valores “---” en campos vacíos.
+* No presento prácticas de manejos, menciona que no hay “Lista”.
+
+##### Datos de Actividad Ganadera: {-}
+* Diferencias en la identificación de las Unidades de Evaluación entre las hojas de cálculo excel, ejemplo FVET  <>  FVET-UDELAR. 
+
+##### Resultados de Indicadores: {-}
+* Algunas muestras sin información de profundidades.
+* Muestras que repiten coordenadas, fecha y profundidad pero tienen diferentes valores de indicadores y propiedades.
+* Adicionan campos a la hoja de cálculo, alterando el orden de los mismos.
+* Aparece la opción “Otros” en el campo “Método de DA”.
+* Adicionaron un nuevo método de respiración del suelo (Respiración basal).
+* Adicionaron nuevos métodos de “Indicador Actividad Biológica” como es la “Actividad Deshidrogenasa” y el método “Von Mersi”.
+
+---
+
+### Venezuela {-}
+
+##### Datos Generales del Proyecto: {-}
+* Faltó información de contacto del socio del proyecto.
+
+##### Datos Generales de la Finca: {-}
+* Deben evitarse el uso de valores “X” en campos vacíos.
+Las coordenadas se introdujeron en grados minutos y segundos y se desconoce el Datum correspondiente. Estas coordenadas deben convertirse al Sistema de coordenadas geográficas, en unidades de grado decimal con datum WGS84.
+* Homologar en todas las hojas el mismo nombre de proyectos. ya que varía.
+* Se Introdujo nombres y apellidos en el campo de solo “Nombres”.
+
+##### Datos de Fincas, Campos y Unidades de Evaluacion: {-}
+* Las Unidades de Evaluación no poseen coordenadas.
+* Falta información de superficies de los Campos o Lotes.
+
+##### Datos de Actividad Agrícola: {-}
+* Aparece la opción “Otros” en campo “Sistema de Uso de las Tierras”.
+* Aparece la opción “Otros” en campo “Tipo de labranza general”
+* Aparece la opción “Otros” en campo “Árboles principales”
+
+##### Datos de Actividad Ganadera: {-}
+* No presentó información.
+
+##### Resultados de Indicadores: {-}
+* Emplearon Nematodos para la información de índice de “Diversidad biológica”.

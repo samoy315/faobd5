@@ -1,0 +1,47 @@
+# Datos Generales de la Finca
+
+#### Venezuela {-}
+* Deben evitarse el uso de valores “X” en campos vacíos.
+* Las coordenadas se introdujeron en grados minutos y segundos y se desconoce el Datum correspondiente. Estas coordenadas deben convertirse al Sistema de coordenadas geográficas, en unidades de grado decimal con datum WGS84.
+* Homologar en todas las hojas el mismo nombre de proyectos. ya que varía.
+* Se Introdujo nombres y apellidos en el campo de solo “Nombres”.
+
+---
+
+#### Argentina {-}
+* No presentó superficie en 12 de las 13 fincas.
+* No presentó información de división administrativas, miembros, participación de la mujer, rol de la mujer, nombres y apellidos, dirección, correo, teléfono del responsable de la finca.
+* Aparece la opción “Otros” en el campo de “Tenencia”.
+
+---
+
+#### Nicaragua {-}
+* Empleo “Manzana como unidad de superficies” en lugar de hectáreas.
+* Faltó indicar en qué sistema de proyección cartográfica están las coordenadas, por ejemplo indicar Sistema de coordenadas, unidad, datum, proyección cartográfica y Huso o Zona, si es el caso.
+* Adicionaron, modificaron y eliminaron algunos campos, lo que impide la uniformidad de sus tablas con las de otros países.
+
+#### Colombia {-}
+* Aparece la opción “Otros” en campo “Sistema de la Finca”.
+* Deben evitarse el uso de valores “X” en campos vacíos.
+
+#### Uruguay {-}
+* Deben evitarse el uso de valores “X” en campos vacíos.
+* Deben evitarse el uso de valores “---” en campos vacíos.
+* Aparece la opción “Otros” en campo “Sistema de la Finca”.
+* Sugerencias de Uruguay para la hoja de Fincas:
+  * En campo Sistema de fincas agregar: Ganadería en todas sus categorías y Agricultura Educación/investigación y Ganadería Educación/investigación.
+En el campo “Participación de la mujer: Toma de decisiones (manejo rodeo, alimentación, sanidad, sistema gestión): mujer; Actividades en tambo: hombres; Actividades a campo: hombres y mujeres; Actividades de gabinete (informes de gestión, investigaciones): mujer; Asesoramiento técnico (que se siembra, cuando, manejo cultivos): hombres; Muestreos para el piloto (toma de muestras): hombres y mujeres.
+
+#### Costa Rica {-}
+* Aparece la opción “Otros” en campo “Sistema de Fincas”.
+* Coloca varias personas en un mismo campo de responsable de la finca.
+* Emplea rango en campo de edad del responsable de la finca, eso convierte el formato del campo de tipo numérico a texto, imposibilitando la realización de cálculos
+* Las coordenadas en grados decimal contienen caracteres tipo textos al final, lo que convierte el formato del campo de tipo numérico a texto, imposibilitando la realización de cálculos y transformaciones.
+* Modificaron la lista del campo “Rol de la mujer” para colocar la opción “Todas las anteriores”.
+* En campo género presentan los dos sexos.
+* El correo del responsable se ubicó en el campo de dirección postal.
+
+#### Paraguay {-}
+* Modificaron la lista del campo de “Tenencia de la Tierra” para incluir “Adquisición hereditaria”.
+* Falta información del responsable de la finca.
+* Deben evitarse el uso de valores “X” en campos vacíos.

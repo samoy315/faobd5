@@ -1,0 +1,8 @@
+# Descargar {-}
+
+```{r message = FALSE, echo=FALSE}
+library(leaflet)
+leaflet()%>%setView(lng = -67.591, lat = 10.240, zoom = 6)%>%addProviderTiles(providers$Esri.WorldImagery)
+
+```
+

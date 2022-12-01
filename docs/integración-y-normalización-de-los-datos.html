@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Integración y normalización de los datos | BASE DE DATOS DE INDICADORES</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Integración y normalización de los datos | BASE DE DATOS DE INDICADORES" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Integración y normalización de los datos | BASE DE DATOS DE INDICADORES" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="FAO" />
+
+
+<meta name="date" content="2022-12-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="niveles-de-abstracción-de-la-bd.html"/>
+<link rel="next" href="observaciones-sobr-los-datos.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><b><a href="./">BD INDICADORES FAO</a></b></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduccion</a></li>
+<li class="chapter" data-level="" data-path="niveles-de-abstracción-de-la-bd.html"><a href="niveles-de-abstracción-de-la-bd.html"><i class="fa fa-check"></i>Niveles de abstracción de la BD</a></li>
+<li class="chapter" data-level="" data-path="integración-y-normalización-de-los-datos.html"><a href="integración-y-normalización-de-los-datos.html"><i class="fa fa-check"></i>Integración y normalización de los datos</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html"><i class="fa fa-check"></i>Observaciones sobr los datos</a>
+<ul>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#generales"><i class="fa fa-check"></i>Generales</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#argentina"><i class="fa fa-check"></i>Argentina</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#colombia"><i class="fa fa-check"></i>Colombia</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#costa-rica"><i class="fa fa-check"></i>Costa Rica</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#nicaragua"><i class="fa fa-check"></i>Nicaragua</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#paraguay"><i class="fa fa-check"></i>Paraguay</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#uruguay"><i class="fa fa-check"></i>Uruguay</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#venezuela"><i class="fa fa-check"></i>Venezuela</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="diagrama-de-entidad---relacion.html"><a href="diagrama-de-entidad---relacion.html"><i class="fa fa-check"></i>Diagrama de Entidad - Relacion</a></li>
+<li class="chapter" data-level="" data-path="análisis-espacial-de-las-muestras..html"><a href="análisis-espacial-de-las-muestras..html"><i class="fa fa-check"></i>Análisis espacial de las Muestras.</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">BASE DE DATOS DE INDICADORES</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="integración-y-normalización-de-los-datos" class="section level1 unnumbered hasAnchor">
+<h1>Integración y normalización de los datos<a href="integración-y-normalización-de-los-datos.html#integración-y-normalización-de-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ii.-integración-y-normalización-de-los-datos-sobre-prácticas-e-indicadores-aportados-por-argentina-colombia-costa-rica-nicaragua-paraguay-uruguay-y-venezuela." class="section level5 unnumbered hasAnchor">
+<h5>II. Integración y normalización de los datos sobre prácticas e indicadores aportados por Argentina, Colombia, Costa Rica, Nicaragua, Paraguay, Uruguay y Venezuela.<a href="integración-y-normalización-de-los-datos.html#ii.-integración-y-normalización-de-los-datos-sobre-prácticas-e-indicadores-aportados-por-argentina-colombia-costa-rica-nicaragua-paraguay-uruguay-y-venezuela." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Se integraron los archivos excel PROTOCOLO DE MSS - RECSOIL, con la información de 7 países: Argentina, Colombia, Costa Rica, Nicaragua, Uruguay, Paraguay y Venezuela.</p>
+<p>Normalización y corrección de información, haciendo hincapié en :</p>
+<ul>
+<li>Lograr concordancia de los campos.</li>
+<li>Reducción de nombres de los campos para que las tablas sean funcionales en la base de datos.</li>
+<li>Corrección del formato de los campos (tipo numérico, texto, fecha, memo y moneda) para posibilitar futuros cálculos.</li>
+<li>Lograr relaciones correctas entre los identificadores (ID) de Proyectos, Fincas, Campos, Unidades de evaluación y Muestras.</li>
+<li>Homologación de coordenadas en el sistema de coordenadas Geográficas en grados decimales y datum WGS84.</li>
+<li>Homologación de unidades de algunas de las propiedades (ejemplo superficies en ha o manzanas).</li>
+<li>Establecer que columnas o campos contenían el término “Otros”, lo que se puede tomar como un posible indicador de la necesidad de ampliar la lista proporcionada de opciones en algunas variables.</li>
+</ul>
+<p>La Figura 2 muestra un ejemplo de los datos integrados y normalizados. Ademas se puede descargar del enlace en el título de la Figura.</p>
+<a href="Descargas/Indica_RESUMEN291122BD.xlsx" title="Tablas en excel"><img src="Imagenes/excel.png" alt="Tablas en excel"/></a>
+<center>
+<em><strong>Figura 2.</strong> Hoja de cálculo excel con las tablas integradas y normalizadas.</em>
+</center>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="niveles-de-abstracción-de-la-bd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="observaciones-sobr-los-datos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

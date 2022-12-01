@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Observaciones sobr los datos | BASE DE DATOS DE INDICADORES</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Observaciones sobr los datos | BASE DE DATOS DE INDICADORES" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Observaciones sobr los datos | BASE DE DATOS DE INDICADORES" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="FAO" />
+
+
+<meta name="date" content="2022-12-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="integración-y-normalización-de-los-datos.html"/>
+<link rel="next" href="diagrama-de-entidad---relacion.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><b><a href="./">BD INDICADORES FAO</a></b></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduccion</a></li>
+<li class="chapter" data-level="" data-path="niveles-de-abstracción-de-la-bd.html"><a href="niveles-de-abstracción-de-la-bd.html"><i class="fa fa-check"></i>Niveles de abstracción de la BD</a></li>
+<li class="chapter" data-level="" data-path="integración-y-normalización-de-los-datos.html"><a href="integración-y-normalización-de-los-datos.html"><i class="fa fa-check"></i>Integración y normalización de los datos</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html"><i class="fa fa-check"></i>Observaciones sobr los datos</a>
+<ul>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#generales"><i class="fa fa-check"></i>Generales</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#argentina"><i class="fa fa-check"></i>Argentina</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#colombia"><i class="fa fa-check"></i>Colombia</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#costa-rica"><i class="fa fa-check"></i>Costa Rica</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#nicaragua"><i class="fa fa-check"></i>Nicaragua</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#paraguay"><i class="fa fa-check"></i>Paraguay</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#uruguay"><i class="fa fa-check"></i>Uruguay</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#venezuela"><i class="fa fa-check"></i>Venezuela</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="diagrama-de-entidad---relacion.html"><a href="diagrama-de-entidad---relacion.html"><i class="fa fa-check"></i>Diagrama de Entidad - Relacion</a></li>
+<li class="chapter" data-level="" data-path="análisis-espacial-de-las-muestras..html"><a href="análisis-espacial-de-las-muestras..html"><i class="fa fa-check"></i>Análisis espacial de las Muestras.</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">BASE DE DATOS DE INDICADORES</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="observaciones-sobr-los-datos" class="section level1 unnumbered hasAnchor">
+<h1>Observaciones sobr los datos<a href="observaciones-sobr-los-datos.html#observaciones-sobr-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="iii.-observaciones-realizadas-a-los-datos-proporcionados-por-los-diferentes-países-argentina-colombia-costa-rica-nicaragua-paraguay-uruguay-y-venezuela." class="section level5 unnumbered hasAnchor">
+<h5>III. Observaciones realizadas a los datos proporcionados por los diferentes países (Argentina, Colombia, Costa Rica, Nicaragua, Paraguay, Uruguay y Venezuela).<a href="observaciones-sobr-los-datos.html#iii.-observaciones-realizadas-a-los-datos-proporcionados-por-los-diferentes-países-argentina-colombia-costa-rica-nicaragua-paraguay-uruguay-y-venezuela." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="generales" class="section level3 unnumbered hasAnchor">
+<h3>Generales<a href="observaciones-sobr-los-datos.html#generales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En esta sección se mostrarán las principales observaciones sobre los datos de las prácticas de manejo sostenible de suelos y aguas (PMSSA) obtenidos por países, con la finalidad de afinar la recolección de nueva información, la cual será incorporada en la base de datos (BD) y con esto garantizar una funcionalidad completa.</p>
+<ul>
+<li><strong>Revisar y normalizar el formatos de los campos</strong>
+<ul>
+<li><strong>Campos tipo fechas:</strong> este formato debe ser uniforme para la introducción de la información por parte de los países, ejemplo dd-mm-aaaa o dd/mm/aaaa o mm-dd-aaaa o mm/dd/aaaa, dependiendo del motor de bases de datos que se utilizará para gestionar la BD. Podría emplearse herramientas de calendarios para ayudar a la introducción de información.</li>
+<li><strong>Campos tipo Moneda:</strong> establecer el formato y una única unidad monetaria a considerar (USD$ o euro), esto será empleado en los campos de “Presupuestos” del proyecto y “Costos de instalación y mantenimiento” de las PMSSA.</li>
+<li><strong>Mayúsculas o minúsculas:</strong> Normalizar el uso de mayúsculas y minúsculas en los datos proporcionados, ya que es frecuente encontrar una misma palabra toda en mayúsculas o toda en minúsculas o con la primera letra en mayúscula y el resto en minúsculas. Esto puede traer problemas en futuras consultas y no es estéticamente adecuado.</li>
+<li><strong>Información Telefónica:</strong> Sería positivo encontrar una manera de homologar (en la medida de lo posible) el formato de los campos relacionados a números telefónicos, ya que presentan mucha variedad de símbolos como paréntesis “()”, guiones “-”, espacios vacíos “ “, signos de suma (plus +) entre otros. Es conocido que existen variaciones entre el formato telefónico de los países, pero sí se puede eliminar estos símbolos, quizás empleando algún tipo de máscara. En cuanto al número se puede emplear códigos internacionales más el formato nacional. Ejemplo: Código país + código telefónico + número particular.</li>
+<li><strong>Acentos:</strong> Sería positivo no emplear acentos en las palabras (en la medida de lo posible).</li>
+<li><strong>Campos de correo:</strong> Normalizar el formato de introducción de la información de correo, ya que en oportunidades viene subrayado como un enlace externo.</li>
+<li><strong>Campos numéricos:</strong> Normalizar el formato numérico en cuanto a su tipo (entero, decimal, simple, doble) según sea el caso, la cantidad de decimales y la separación de miles. Además verificar que la separación de decimales sea por puntos (.) y no coma (,).</li>
+</ul></li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Detalles en opciones de “Listas” empleadas para rellenar la información de campos:</strong>
+<ul>
+<li>Normalizar en una lista las posibles siglas de los proyectos FAO, si se considera pertinente.</li>
+<li>Se presentaron detalles en la redacción en las opciones de las listas como: falta de orden alfabético; opciones que inician en mayúsculas en algunos casos y en otros no, y opciones que inician con signos “&gt;” (ejemplo campo “Temporada principal Cultivo/pasto sembrado”) de la información de actividades agrícolas.</li>
+<li>Corregir redacción de las opciones de listas. Ejemplo en los campos “Tipo Climático (IPCC)” y “Clase de Textura de Suelo Superficial (general)”.</li>
+<li>Algunas listas de opciones están rellenas con frases donde las palabras se separan por espacios “ “ y en otras con guiones bajos “_”, sería positivo homologar.</li>
+<li>Homologar todas las listas en un solo idioma, algunas están en inglés y otras en castellano. Ejemplo la opción “Otros” puede aparecer en castellano y en otras en inglés.</li>
+<li>Homologar en una lista las opciones posibles del campo “Método de Productividad de Suelo”.</li>
+<li>En la lista de opciones del campo “Clase de Uso de la Tierra (específico)” aparecen tanto “pastizales” como “pastizales permanente”, lo cual es muy similar.</li>
+</ul></li>
+</ul>
+<p><br></p>
+<ul>
+<li>Evitar el uso de diversos símbolos o siglas en los casos de carencia de información. Fue típico encontrar: “NA”, “N/A”, - - - , “x”, 0 o espacios vacíos. Sería positivo emplear uno solo siempre y explicar cuándo sería pertinente aplicar el “no aplica (NA)” o solo dejar el campo vacío.</li>
+<li>Sería conveniente agregar un campo al formulario de captura de información donde se solicite la superficie del nivel de abstracción “Campo”, ya que actualmente no posee.</li>
+<li>Analizar la posibilidad de incluir la clase de los suelos según Soil taxonomy (USDA), debido a que es de uso frecuente por algunos países de la región.</li>
+<li>Sería conveniente determinar la clase textural de los suelos, empleando los porcentajes de arena, limo y arcilla, usando el triángulo textural o un código R. Así se evitarían posibles contradicciones con respecto al campo “Clase de Textura de Suelo Superficial (específica)” solicitado mediante opciones listadas.</li>
+<li>Asegurarse que el valor del campo “Pendiente Media” esté dentro de los valores preestablecidos en el campo “Clase de Pendiente Predominante”.</li>
+<li>En la lista del campo de “Clase de Textura de Suelo Superficial (general)” parece que faltara la opción “arcillosa gruesa”, si existe el caso.
+*Aclarar los posibles términos análogos a las divisiones de 1er y 2do orden como son “Provincias”, “Estados” y “Departamentos” (1er orden), y “Municipios” (2do orden), ya que existe cierta confusión entre estos términos.</li>
+<li>Incorporar para los diferentes niveles de abstracción (Proyectos, Fincas, Campos, Unidades de evaluación y Muestras) en sus respectivas tablas, Campos únicos que podrían ser considerados Campos claves y sirvan para crear las relaciones entre las diferentes tablas. Esto se justifica porque actualmente pueden existir niveles (ejemplo: Fincas y Campos) con el mismo nombre en el país y entre países.</li>
+<li>Cual seria la razón que en los campos “Forma de terreno” y “Posición predominante” existan las mismas opciones en su lista.
+Homologar todas las coordenadas en el Sistema de coordenadas geográficas, en unidades de grado decimal con datum WGS84.</li>
+<li>Se recomienda la adición de un campo para indicar el organismo empleado para determinar la información de “Diversidad o Calidad Biológica del Suelo-índice, Shannon”, ya que los organismos varían según el empleado por cada país, como por ejemplo: artrópodos, nematodos, macrofauna, etc.</li>
+<li>Es frecuente encontrar que las coordenadas de las muestras se repiten (coordenadas, fecha y profundidad), duplicando información de indicadores en la misma ubicación.</li>
+</ul>
+<hr />
+<p><strong>A continuación se describen las observaciones a los datos particulares de cada país.</strong></p>
+</div>
+<div id="argentina" class="section level3 unnumbered hasAnchor">
+<h3>Argentina<a href="observaciones-sobr-los-datos.html#argentina" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Falta información sobre:
+<ul>
+<li>Superficie de proyecto, número de agricultores y técnicos.</li>
+<li>Teléfono y dirección de persona contacto.</li>
+</ul></li>
+</ul>
+</div>
+<div id="datos-generales-de-la-finca" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No presentó superficie en 12 de las 13 fincas.</li>
+<li>Falta información de división administrativas, miembros, participación y rol de la mujer, nombres y apellidos, dirección, correo, teléfono del responsable de la finca.</li>
+<li>Aparece la opción “Otros” en el campo de “Tenencia”.</li>
+</ul>
+</div>
+<div id="datos-de-fincas-campos-y-unidades-de-evaluación" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Fincas, Campos y Unidades de Evaluación:<a href="observaciones-sobr-los-datos.html#datos-de-fincas-campos-y-unidades-de-evaluación" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No se identificaron las Unidades de Evaluación.</li>
+<li>Las Unidades de Evaluación no poseen coordenadas.</li>
+<li>Falta información de superficies de Campos y Unidades de Evaluación.</li>
+<li>Falta información en los campos sobre el paisaje (Pendiente media, Forma de terreno predominante y posición predominante).</li>
+<li>Falta información sobre el porcentaje de Arcilla, Limo y Arena.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No se identificó las Unidades de Evaluación.</li>
+<li>La Finca “EEA INTA Abra Pampa” está dividida en dos campos (INTA y JS), según hoja de cálculo de Datos de Fincas, Campos y UEs, pero en las Actividades agrícolas no se diferencian.</li>
+<li>Las Fincas “Olivares” se dividen en dos campos pero no se identifican diferenciados y sus coordenadas son las mismas. Si existen diferencias de cultivos y de Práctica de manejo.</li>
+<li>Las Fincas “SAA” se dividen en dos campos pero no se identifican diferenciados y sus coordenadas son las mismas. Si existen diferencias de cultivos (Vicia y trigo) pero no se colocó en el campo correspondiente (Temporada principal Cultivo/pasto sembrado (tierras de cultivo)), si no en las observaciones.</li>
+<li>Aparece la opción “Otros” en los campos “Sistema de Uso” y “Pastos principales”.</li>
+<li>Son frecuentes los “NA” en la mayoría de los campos.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Aparece la opción “Otros” en el campo “Tipo de Animal (IPCC )”.</li>
+<li>La Finca “EEA INTA Abra Pampa” está separada en dos campos, porque poseen dos tipos de animales, Vicuñas en uno, y Ovinos y Llamas en el otro, sin embargo la actividad ganadera está relacionada con el nivel de abstracción Finca. Sugerimos cambiarlo a nivel de campos.</li>
+<li>El número de cabezas (rebaño inicial y final) es fraccionado y no entero.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No se identificaron los Campos o Lotes y tampoco las Unidades de Evaluación.</li>
+<li>No hay diferencias en la identificación de cada muestras (ID Muestra), todas son valor 1.</li>
+<li>Colocó algunos registros “Sin Datos”en los campos “Valor de la Productividad del Suelo (PS)” y “Valor de Respiración de Suelos (RS)”.</li>
+<li>Introduce caracteres textuales en el campo “Abundancia de Macrofauna (TSBF/ISO)” en lugar de datos numéricos, alterando el formato del campo.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="colombia" class="section level3 unnumbered hasAnchor">
+<h3>Colombia<a href="observaciones-sobr-los-datos.html#colombia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto-1" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Presentó problemas con la fecha de inicio de proyecto.</li>
+<li>Nombre del tipo de proyecto demasiado largo.</li>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.</li>
+<li>No presentó información de superficies, número de agricultores y técnicos, ni socios.</li>
+</ul>
+</div>
+<div id="datos-generales-de-la-finca-1" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Aparece la opción “Otros” en campo “Sistema de la Finca”.</li>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.</li>
+<li>Datos de Fincas, Campos y Unidades de Evaluación:</li>
+<li>Las coordenadas de los Campos y Unidades de Evaluación son las mismas.</li>
+<li>Falta información de Evapotranspiración ETO y de texturas de los suelos.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola-1" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Se invirtieron las identificaciones de Campos y Unidades de Evaluación, lo que puede traer problemas en las relaciones de la Base de Datos.</li>
+<li>Campo de “Sistema de Uso de la Tierra” vacío.
+“NA” en todos los “Sistema de Uso de la Tierra”.</li>
+<li>Aparece la opción “Otros” en los campos “Sistema agrícola” y “Pastos principales”.</li>
+<li>Colombia sugiere incluir el pasto “Kikuyo” ya que no está disponible en la lista de opciones del campo “Principales pastos”</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera-1" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Sin observaciones.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores-1" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No hay diferencias en la identificación de cada muestras (ID Muestra), todas son valor 1.</li>
+<li>Falta fecha de muestreo.</li>
+<li>Deben evitarse el uso de valores “ND” en campos vacíos.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="costa-rica" class="section level3 unnumbered hasAnchor">
+<h3>Costa Rica<a href="observaciones-sobr-los-datos.html#costa-rica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto-2" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Deben evitarse el uso de valores “X” en campos vacíos.
+No tiene fecha de finalización del proyecto
+Homologar formato de número telefónico y eliminar los paréntesis</p>
+</div>
+<div id="datos-generales-de-la-finca-2" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Aparece la opción “Otros” en campo “Sistema de Fincas”.</li>
+<li>Coloca varias personas en un mismo campo de responsable de la finca.</li>
+<li>Emplea rango (72 - 74) en campo de edad del responsable de la finca, eso convierte el formato del campo de tipo numérico a texto, imposibilitando la realización de cálculos</li>
+<li>Las coordenadas en grados decimal contienen caracteres tipo textos al final, lo que convierte el formato del campo de tipo numérico a texto, imposibilitando la realización de cálculos y transformaciones.</li>
+<li>Modificaron la lista del campo “Rol de la mujer” para colocar la opción “Todas las anteriores”.</li>
+<li>En campo género presentan los dos sexos.</li>
+<li>El correo del responsable se ubicó en el campo de dirección postal.</li>
+</ul>
+</div>
+<div id="datos-de-fincas-campos-y-unidades-de-evaluación-1" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Fincas, Campos y Unidades de Evaluación:<a href="observaciones-sobr-los-datos.html#datos-de-fincas-campos-y-unidades-de-evaluación-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>La identificación y Coordenadas de los Campos y Unidades de Evaluación son similares.</li>
+<li>Caracteres textuales en la coordenadas, que cambian el formato y comprometen futuros cálculos.</li>
+<li>Cambios en los elementos de la lista de opciones del campo “Forma de Terrenos”.</li>
+<li>Falta información de clima: Precipitación, temperaturas y ETO.</li>
+<li>Falta información de porcentajes de Arcillas y Limos.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola-2" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Adicionaron 3 campos más sobre prácticas de manejo.</li>
+<li>Coloca caracteres textuales en el campo “Costo de Mantenimiento de la Práctica 1”, lo que altera el tipo de formato y compromete los futuros cálculos.</li>
+<li>En el campo “Periodicidad del Fuego” no colocan años como pide la unidad de este campo, sino comentarios textuales.</li>
+<li>Faltaron datos de la Finca 16.</li>
+<li>Aparece la opción “Otros” en los campos “Sistema de Uso de la Tierra”, “Sistema Agrícola” y “PMSS3”, “Temporada”, “Principales pastos y árboles”.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera-2" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de diferentes opciones de “NA” y “N/A” en los campos vacíos.</li>
+<li>Diferencias en la identificación de las Fincas entre las hojas de cálculo excel, ejemplo F1 &lt;&gt; Finca 1.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores-2" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Diferencias en la identificación de las Fincas entre las hojas de cálculo excel, ejemplo F1 &lt;&gt; Finca 1.</li>
+<li>Formato del campo fecha no adecuado.</li>
+<li>Introduce valores textuales en el campo “Valor de la Productividad del Suelo (PS)”, el cual debe ser numérico. Esto cambia el tipo de formato a texto y no permitirá cálculos, ni armonización con los datos del resto de países.</li>
+<li>Aparece la opción “Otros” en el campo “Método de DA”.</li>
+<li>Fataria homologar los decimales en los valores de un mismo campo numérico.</li>
+<li>Adicionaron una gran cantidad de campos nuevos.</li>
+<li>Falta información de Conductividad Eléctrica.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="nicaragua" class="section level3 unnumbered hasAnchor">
+<h3>Nicaragua<a href="observaciones-sobr-los-datos.html#nicaragua" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto-3" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>La hoja de “Datos Generales del Proyecto” no es igual a las de otros países, no tiene el campo de correo de los socios.</li>
+<li>Formato de números telefónico son diferentes, deberían ser homologados
+Deben evitarse el uso de valores “X” en campos vacíos.</li>
+<li>Adicionaron y eliminaron algunos campos, lo que impide uniformidad en las tablas.</li>
+</ul>
+</div>
+<div id="datos-generales-de-la-finca-3" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Empleo “Manzana como unidad de superficies” en lugar de hectáreas.</li>
+<li>Faltó indicar en qué sistema de proyección cartográfica están las coordenadas, por ejemplo indicar Sistema de coordenadas, unidad, datum, proyección cartográfica y Huso o Zona, si es el caso.</li>
+<li>Adicionaron, modificaron y eliminaron algunos campos, lo que impide la uniformidad de sus tablas con las de otros países.</li>
+</ul>
+</div>
+<div id="datos-de-fincas-campos-y-unidades-de-evaluación-2" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Fincas, Campos y Unidades de Evaluación:<a href="observaciones-sobr-los-datos.html#datos-de-fincas-campos-y-unidades-de-evaluación-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Eliminaron el campo de identificación de los Campos o Lotes, sólo identificaron las * Unidades de Evaluación, pero colocaron las coordenadas de los campos.</li>
+<li>Empleo “Manzana como unidad de superficies” en lugar de hectáreas.</li>
+<li>Faltó indicar en qué sistema de proyección cartográfica están las coordenadas, por ejemplo indicar Sistema de coordenadas, unidad, datum, proyección cartográfica y Huso o Zona, si es el caso</li>
+<li>Adicionaron, modificaron y eliminaron algunos campos, lo que impide la uniformidad de sus tablas con las de otros países.</li>
+<li>Aparece la opción “Otros” en campo “Posición predominante”.</li>
+<li>Colocaron rangos en el campo de temperaturas y eso afecta el tipo de campo, imposibilitando futuros cálculos.</li>
+<li>En el campo observaciones sugieren adicionar otras clases fisiográficas como: Suelos de laderas, Suelos planos donde se cultiva y Suelos de propiedades vérticas.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola-3" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Problemas con la identificación empleada para las Fincas, Campos y Unidades de Evaluación (confuso).</li>
+<li>Aparece la opción “Otros” en los campos “Sistema agrícola”, “Pastos principales”, PMSS2.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera-3" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No presentó información.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores-3" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Formatos del campo de fecha inadecuados.</li>
+<li>Introduce los valores de Valor de la Productividad del Suelo (PS) junto a las unidades (texto) alterando el formato del campo.</li>
+<li>Aparece la opción “Otros” en el campo “Método de DA”.</li>
+<li>Deben evitarse el uso de valores “0” en campos vacíos.</li>
+<li>En la Conductividad Eléctrica creemos que la unidad no es dS/m.</li>
+<li>En la Infiltración de agua creemos que la unidad de cm/h.</li>
+<li>En el campo “Calidad Biológica del Suelo-índice de Artrópodos (QBS-ar) Shannon” emplean artrópodos y otros países lo hacen con Nematodos, macrofauna, etc.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="paraguay" class="section level3 unnumbered hasAnchor">
+<h3>Paraguay<a href="observaciones-sobr-los-datos.html#paraguay" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto-4" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.</li>
+<li>No presentó información de socios.</li>
+</ul>
+</div>
+<div id="datos-generales-de-la-finca-4" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Modificaron la lista del campo de “Tenencia de la Tierra” para incluir “Adquisición hereditaria”.</li>
+<li>Falta información del responsable de la finca.</li>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.</li>
+</ul>
+</div>
+<div id="datos-de-fincas-campos-y-unidades-de-evaluación-3" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Fincas, Campos y Unidades de Evaluación:<a href="observaciones-sobr-los-datos.html#datos-de-fincas-campos-y-unidades-de-evaluación-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de valores “=” en campos.</li>
+<li>Nombre de los campos o lotes demasiado largos.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola-4" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Cambiaron la manera de identificar las Fincas y Campos entre las diferentes hojas de cálculo excel.</li>
+<li>Aparece la opción “Otros” en los campos “Sistema de Uso de la Tierra”, “Sistema agrícola”.</li>
+<li>Deben evitarse el uso de valores “-” en campos vacíos.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera-4" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Aparece información de Ecuador.</li>
+<li>Diferencias en la identificación de las Fincas entre las hojas de cálculo excel, ejemplo Finca Victor Ramirez &lt;&gt; Farm_A &lt;&gt; Finca_A.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores-4" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Colocaron el nombre de los campos o lotes en el campo de identificación de las Fincas.</li>
+<li>Formato de campo ”Fecha de Muestreo” inadecuado.</li>
+<li>Aparece la opción “Otros” en el campo “Método de DA”.</li>
+<li>Falta información de Conductividad Eléctrica.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="uruguay" class="section level3 unnumbered hasAnchor">
+<h3>Uruguay<a href="observaciones-sobr-los-datos.html#uruguay" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto-5" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.</li>
+</ul>
+</div>
+<div id="datos-generales-de-la-finca-5" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.</li>
+<li>Deben evitarse el uso de valores “—” en campos vacíos.</li>
+<li>Aparece la opción “Otros” en campo “Sistema de la Finca”.</li>
+<li>Sugerencias de Uruguay para la hoja de Fincas:
+<ul>
+<li>En campo Sistema de fincas agregar: Ganadería en todas sus categorías y Agricultura Educación/investigación y Ganadería Educación/investigación.
+En el campo “Participación de la mujer: Toma de decisiones (manejo rodeo, alimentación, sanidad, sistema gestión): mujer; Actividades en tambo: hombres; Actividades a campo: hombres y mujeres; Actividades de gabinete (informes de gestión, investigaciones): mujer; Asesoramiento técnico (que se siembra, cuando, manejo cultivos): hombres; Muestreos para el piloto (toma de muestras): hombres y mujeres.</li>
+</ul></li>
+</ul>
+</div>
+<div id="datos-de-fincas-campos-y-unidades-de-evaluacion" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Fincas, Campos y Unidades de Evaluacion:<a href="observaciones-sobr-los-datos.html#datos-de-fincas-campos-y-unidades-de-evaluacion" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Faltó información de coordenadas de las Unidades de Evaluación..</li>
+<li>Deben evitarse el uso de valores “—” en campos vacíos.</li>
+<li>Aparece la opción “Otros” en campo “Forma de terreno predominante”.</li>
+<li>Incorporaron sugerencias como:
+<ul>
+<li>Agregar a “Forma de Terreno predominante” : Las Tierras bajas levemente onduladas y Sierras.</li>
+</ul></li>
+<li>Mencionan que les hizo falta algunos campos como el de “Clase de textura de suelos superficial - General”.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola-5" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de valores “—” en campos vacíos.</li>
+<li>No presento prácticas de manejos, menciona que no hay “Lista”.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera-5" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Diferencias en la identificación de las Unidades de Evaluación entre las hojas de cálculo excel, ejemplo FVET &lt;&gt; FVET-UDELAR.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores-5" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Algunas muestras sin información de profundidades.</li>
+<li>Muestras que repiten coordenadas, fecha y profundidad pero tienen diferentes valores de indicadores y propiedades.</li>
+<li>Adicionan campos a la hoja de cálculo, alterando el orden de los mismos.</li>
+<li>Aparece la opción “Otros” en el campo “Método de DA”.</li>
+<li>Adicionaron un nuevo método de respiración del suelo (Respiración basal).</li>
+<li>Adicionaron nuevos métodos de “Indicador Actividad Biológica” como es la “Actividad Deshidrogenasa” y el método “Von Mersi”.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="venezuela" class="section level3 unnumbered hasAnchor">
+<h3>Venezuela<a href="observaciones-sobr-los-datos.html#venezuela" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="datos-generales-del-proyecto-6" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales del Proyecto:<a href="observaciones-sobr-los-datos.html#datos-generales-del-proyecto-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Faltó información de contacto del socio del proyecto.</li>
+</ul>
+</div>
+<div id="datos-generales-de-la-finca-6" class="section level5 unnumbered hasAnchor">
+<h5>Datos Generales de la Finca:<a href="observaciones-sobr-los-datos.html#datos-generales-de-la-finca-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Deben evitarse el uso de valores “X” en campos vacíos.
+Las coordenadas se introdujeron en grados minutos y segundos y se desconoce el Datum correspondiente. Estas coordenadas deben convertirse al Sistema de coordenadas geográficas, en unidades de grado decimal con datum WGS84.</li>
+<li>Homologar en todas las hojas el mismo nombre de proyectos. ya que varía.</li>
+<li>Se Introdujo nombres y apellidos en el campo de solo “Nombres”.</li>
+</ul>
+</div>
+<div id="datos-de-fincas-campos-y-unidades-de-evaluacion-1" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Fincas, Campos y Unidades de Evaluacion:<a href="observaciones-sobr-los-datos.html#datos-de-fincas-campos-y-unidades-de-evaluacion-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Las Unidades de Evaluación no poseen coordenadas.</li>
+<li>Falta información de superficies de los Campos o Lotes.</li>
+</ul>
+</div>
+<div id="datos-de-actividad-agrícola-6" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Agrícola:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-agrícola-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Aparece la opción “Otros” en campo “Sistema de Uso de las Tierras”.</li>
+<li>Aparece la opción “Otros” en campo “Tipo de labranza general”</li>
+<li>Aparece la opción “Otros” en campo “Árboles principales”</li>
+</ul>
+</div>
+<div id="datos-de-actividad-ganadera-6" class="section level5 unnumbered hasAnchor">
+<h5>Datos de Actividad Ganadera:<a href="observaciones-sobr-los-datos.html#datos-de-actividad-ganadera-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>No presentó información.</li>
+</ul>
+</div>
+<div id="resultados-de-indicadores-6" class="section level5 unnumbered hasAnchor">
+<h5>Resultados de Indicadores:<a href="observaciones-sobr-los-datos.html#resultados-de-indicadores-6" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Emplearon Nematodos para la información de índice de “Diversidad biológica”.</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="integración-y-normalización-de-los-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diagrama-de-entidad---relacion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

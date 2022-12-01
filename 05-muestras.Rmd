@@ -1,0 +1,45 @@
+# Análisis espacial de las Muestras. {-}
+
+##### V. Análisis de condiciones de las muestras de suelos y su distribución espacial. {-}
+
+<br>
+
+```{r echo=FALSE}
+library(rmarkdown)
+library(leaflet)
+datos <- read.csv(file = "Descargas/Ptos_muestras.csv", header=TRUE)
+#leaflet()%>%setView(lng = -67.591, lat = 10.240, zoom = 6)%>%addProviderTiles(providers$Esri.WorldImagery)
+leaflet(data = datos)%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI )%>%addProviderTiles(providers$Esri.WorldImagery)
+
+```
+
+<br>
+La Figura 5. Expone la distribución espacial de las muestras de suelos con datos de indicadores de productividad y propiedades físicas y químicas. Las mismas fueron obtenidas a partir de las coordenadas proporcionadas por los países, transformadas y homologadas al sistema de coordenadas geográficas en grados decimal y datum WGS84.
+
+**Observaciones:**
+
+* Argentina:
+  * Presentó 13 sitios de muestreos con 32 muestras.
+  * 26 de estas 32 muestras se observaron correctas.
+  * Las principales observaciones se presentaron en las Fincas “EEA INTA Abra Pampa”, “Oliveros” y “San Antonio de Areco” , las cuales poseen varias muestras  con las mismas coordenadas, fechas y profundidades.
+* Colombia:
+  * Presentó 3 sitios de muestreos con 3 muestras que se observan correctas 
+* Costa Rica:
+  * Presentó 16 sitios de muestreos con 16 muestras que se observan correctas 
+* Nicaragua:
+  * Presentó 5 sitios de muestreos con 12 muestras.
+  * 5 de estas 12 muestras se observan correctas.
+  * Las principales observaciones son muestras de diferentes Unidades de Evaluación con las mismas coordenadas. Además se repiten profundidades y fechas.
+* Paraguay:
+  * Presentó 3 sitios de muestreos con 3 muestras que se observan correctas 
+* Uruguay:
+  * Presentó 4 sitios de muestreos con 65 muestras diferentes.
+  * 31 de estas 65 muestras se observan correctas, por el contrario 34 de las mismas presentan las mismas coordenadas, fechas o profundidad.
+* Venezuela:
+  * Presentó 9 sitios de muestreos con 9 muestras que se observan correctas 
+
+<br>
+
+En conclusión se integraron 140 muestras de los 7 países, de las cuales 93 se observan correctas, pero solo representan 53 sitios geo-localizados.
+
+---

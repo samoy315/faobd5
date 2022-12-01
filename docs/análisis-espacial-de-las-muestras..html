@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Análisis espacial de las Muestras. | BASE DE DATOS DE INDICADORES</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Análisis espacial de las Muestras. | BASE DE DATOS DE INDICADORES" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Análisis espacial de las Muestras. | BASE DE DATOS DE INDICADORES" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="FAO" />
+
+
+<meta name="date" content="2022-12-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="diagrama-de-entidad---relacion.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><b><a href="./">BD INDICADORES FAO</a></b></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduccion</a></li>
+<li class="chapter" data-level="" data-path="niveles-de-abstracción-de-la-bd.html"><a href="niveles-de-abstracción-de-la-bd.html"><i class="fa fa-check"></i>Niveles de abstracción de la BD</a></li>
+<li class="chapter" data-level="" data-path="integración-y-normalización-de-los-datos.html"><a href="integración-y-normalización-de-los-datos.html"><i class="fa fa-check"></i>Integración y normalización de los datos</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html"><i class="fa fa-check"></i>Observaciones sobr los datos</a>
+<ul>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#generales"><i class="fa fa-check"></i>Generales</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#argentina"><i class="fa fa-check"></i>Argentina</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#colombia"><i class="fa fa-check"></i>Colombia</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#costa-rica"><i class="fa fa-check"></i>Costa Rica</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#nicaragua"><i class="fa fa-check"></i>Nicaragua</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#paraguay"><i class="fa fa-check"></i>Paraguay</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#uruguay"><i class="fa fa-check"></i>Uruguay</a></li>
+<li class="chapter" data-level="" data-path="observaciones-sobr-los-datos.html"><a href="observaciones-sobr-los-datos.html#venezuela"><i class="fa fa-check"></i>Venezuela</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="diagrama-de-entidad---relacion.html"><a href="diagrama-de-entidad---relacion.html"><i class="fa fa-check"></i>Diagrama de Entidad - Relacion</a></li>
+<li class="chapter" data-level="" data-path="análisis-espacial-de-las-muestras..html"><a href="análisis-espacial-de-las-muestras..html"><i class="fa fa-check"></i>Análisis espacial de las Muestras.</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">BASE DE DATOS DE INDICADORES</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="análisis-espacial-de-las-muestras." class="section level1 unnumbered hasAnchor">
+<h1>Análisis espacial de las Muestras.<a href="análisis-espacial-de-las-muestras..html#análisis-espacial-de-las-muestras." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="v.-análisis-de-condiciones-de-las-muestras-de-suelos-y-su-distribución-espacial." class="section level5 unnumbered hasAnchor">
+<h5>V. Análisis de condiciones de las muestras de suelos y su distribución espacial.<a href="análisis-espacial-de-las-muestras..html#v.-análisis-de-condiciones-de-las-muestras-de-suelos-y-su-distribución-espacial." class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><br></p>
+<pre><code>## Warning: package &#39;leaflet&#39; was built under R version 4.2.2</code></pre>
+<div id="htmlwidget-d3c75014257f7e2195f4" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d3c75014257f7e2195f4">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addCircles","args":[[10.418805556,10.418805556,10.418833333,10.417166667,10.417472222,10.402666667,10.402972222,10.440583333,10.441111111,-22.722849,-22.722849,-22.722849,-22.722849,-23.197777,-23.197777,-23.62972222,-23.62972222,-23.8430555,-23.8430555,-23.286089,-23.286089,-24.8986,-24.8986,-26.8402777,-26.8402777,-28.642291,-28.642291,-26.456111,-26.456111,-32.671,-32.671,-32.56,-32.56,-32.56,-32.56,-34.6286,-34.6286,-34.1897,-34.1897,-34.1897,-34.1897,13.403279629,13.403279629,13.400292823,13.400292823,13.375442048,13.375442048,13.474918905,13.474918905,13.474918905,13.474918905,13.433233268,13.433233268,5.662777778,5.663055556,5.646666667,-34.680535,-34.679394,-34.680535,-34.680535,-34.680535,-34.679394,-34.679394,-34.679394,-34.680535,-34.680535,-34.680535,-34.680535,-34.680535,-34.680535,-34.680535,-34.679394,-34.679394,-34.679394,-34.679394,-34.679394,-34.679394,-34.679394,-34.679394,-34.680535,-34.679394,-34.680535,-34.680535,-34.680535,-34.679394,-34.679394,-34.679394,-34.680535,-34.679394,-34.685705,-34.685705,-34.685705,-34.686653,-34.686653,-34.686653,-34.685705,-34.685705,-34.685705,-34.685705,-34.685705,-34.685705,-34.686653,-34.686653,-34.686653,-34.686653,-34.686653,-34.686653,-34.685705,-34.686653,-34.685705,-34.685705,-34.685705,-34.686653,-34.686653,-34.686653,-34.685705,-34.685705,-34.685705,-34.686653,-34.686653,-34.686653,9.94497,9.95189,10.03029,10.03063,10.02667,10.01304,10.02271,10.0755,10.04529,10.02668,10.00769,10.00972,9.94826,9.9558,9.96336,9.9504,-26.701278,-26.70668,-26.705774],[-67.78375,-67.782055556,-67.780722222,-67.782638889,-67.784666667,-67.789361111,-67.788138889,-67.771055556,-67.772527778,-65.696964,-65.696964,-65.696964,-65.696964,-65.34166666,-65.34166666,-65.4077777,-65.4077777,-65.5033333,-65.5033333,-64.099247,-64.099247,-65.4222,-65.4222,-60.395277,-60.395277,-62.91415,-62.91415,-60.173333,-60.173333,-65.246,-65.246,-60.88,-60.88,-60.88,-60.88,-59.8122,-59.8122,-59.5666,-59.5666,-59.5666,-59.5666,-86.24631282,-86.24631282,-86.24529694,-86.24529694,-86.277973779,-86.277973779,-86.529014166,-86.529014166,-86.529014166,-86.529014166,-86.631236159,-86.631236159,-73.818611111,-73.818611111,-73.818333333,-56.544176,-56.543418,-56.544176,-56.544176,-56.544176,-56.543418,-56.543418,-56.543418,-56.544176,-56.544176,-56.544176,-56.544176,-56.544176,-56.544176,-56.544176,-56.543418,-56.543418,-56.543418,-56.543418,-56.543418,-56.543418,-56.543418,-56.543418,-56.544176,-56.543418,-56.544176,-56.544176,-56.544176,-56.543418,-56.543418,-56.543418,-56.544176,-56.543418,-56.536733,-56.536733,-56.536733,-56.537537,-56.537537,-56.537537,-56.536733,-56.536733,-56.536733,-56.536733,-56.536733,-56.536733,-56.537537,-56.537537,-56.537537,-56.537537,-56.537537,-56.537537,-56.536733,-56.537537,-56.536733,-56.536733,-56.536733,-56.537537,-56.537537,-56.537537,-56.536733,-56.536733,-56.536733,-56.537537,-56.537537,-56.537537,-84.50576,-84.50626,-84.45331,-84.45088,-84.45556,-84.47557,-84.47608,-84.44354,-84.43253,-84.46102,-84.44898,-84.45012,-84.55686,-84.59664,-84.46858,-84.47638,-55.33145,-55.326616,-55.32622],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}],"limits":{"lat":[-34.686653,13.474918905],"lng":[-86.631236159,-55.32622]}},"evals":[],"jsHooks":[]}</script>
+<p><br>
+La Figura 5. Expone la distribución espacial de las muestras de suelos con datos de indicadores de productividad y propiedades físicas y químicas. Las mismas fueron obtenidas a partir de las coordenadas proporcionadas por los países, transformadas y homologadas al sistema de coordenadas geográficas en grados decimal y datum WGS84.</p>
+<p><strong>Observaciones:</strong></p>
+<ul>
+<li>Argentina:
+<ul>
+<li>Presentó 13 sitios de muestreos con 32 muestras.</li>
+<li>26 de estas 32 muestras se observaron correctas.</li>
+<li>Las principales observaciones se presentaron en las Fincas “EEA INTA Abra Pampa”, “Oliveros” y “San Antonio de Areco” , las cuales poseen varias muestras con las mismas coordenadas, fechas y profundidades.</li>
+</ul></li>
+<li>Colombia:
+<ul>
+<li>Presentó 3 sitios de muestreos con 3 muestras que se observan correctas</li>
+</ul></li>
+<li>Costa Rica:
+<ul>
+<li>Presentó 16 sitios de muestreos con 16 muestras que se observan correctas</li>
+</ul></li>
+<li>Nicaragua:
+<ul>
+<li>Presentó 5 sitios de muestreos con 12 muestras.</li>
+<li>5 de estas 12 muestras se observan correctas.</li>
+<li>Las principales observaciones son muestras de diferentes Unidades de Evaluación con las mismas coordenadas. Además se repiten profundidades y fechas.</li>
+</ul></li>
+<li>Paraguay:
+<ul>
+<li>Presentó 3 sitios de muestreos con 3 muestras que se observan correctas</li>
+</ul></li>
+<li>Uruguay:
+<ul>
+<li>Presentó 4 sitios de muestreos con 65 muestras diferentes.</li>
+<li>31 de estas 65 muestras se observan correctas, por el contrario 34 de las mismas presentan las mismas coordenadas, fechas o profundidad.</li>
+</ul></li>
+<li>Venezuela:
+<ul>
+<li>Presentó 9 sitios de muestreos con 9 muestras que se observan correctas</li>
+</ul></li>
+</ul>
+<p><br></p>
+<p>En conclusión se integraron 140 muestras de los 7 países, de las cuales 93 se observan correctas, pero solo representan 53 sitios geo-localizados.</p>
+<hr />
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="diagrama-de-entidad---relacion.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+# Diagrama de Entidad - Relacion {-}
+
+##### VI. Diseño del diagrama Entidad - Relación de la Base de datos sobre prácticas de manejo sostenible y aguas (PMSSA) e indicadores. {-}
+
+Se diseñó la base de datos en un diagrama con la aplicación DBdiagram.io, exportable a diversos formatos de motores de base de datos. Como se muestra en las Figuras 3. El enlace del título de la figura puede enlazarlo al diagrama en la aplicación original.
+
+<br>
+
+<a href="https://dbdiagram.io/d/63615c235170fb6441de4adf" target="_blank" title="Diagrama Entidad - Relacion"><img src="Imagenes/DBdiagram.png" alt="Diagrama Entidad - Relacion DBdiagram.io"/></a>
+
+<center>***Figura 3.** Diseño de Base de datos en la aplicacion web dbdiagfram.io*</center>
+
+<br>
+
+<a href="Descargas/BD_Indicadores281122.accdb" title="Tablas en access"><img src="Imagenes/acces1.png" alt="Tablas en access"/></a>
+<center>***Figura 4.** Tablas de diseño de Base de datos Indicadores.*</center>
