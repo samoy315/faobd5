@@ -8,9 +8,10 @@
 ```{r warning=FALSE, echo=FALSE}
 library(rmarkdown)
 library(leaflet)
-datos <- read.csv(file = "Descargas/Ptos_muestras.csv", header=TRUE)
+datos <- read.csv(file = "Descargas/Ptos_muestras_para_web.csv", header=TRUE)
 #leaflet()%>%setView(lng = -67.591, lat = 10.240, zoom = 6)%>%addProviderTiles(providers$Esri.WorldImagery)
-leaflet(data = datos, width = 500 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
+#leaflet(data = datos, width = 500 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery%>)
+leaflet(data = datos, width = 200 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, popup = ~FINCANOMB, label = ~MUESTRAID1, radius = 10, fill = TRUE, fillColor = "blue", fillOpacity = 0.3, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
 ```
 </center></div>
 <br>
