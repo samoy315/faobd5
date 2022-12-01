@@ -4,15 +4,15 @@
 
 <br>
 
-```{r echo=FALSE}
+<div><center>
+```{r warning=FALSE, echo=FALSE}
 library(rmarkdown)
 library(leaflet)
 datos <- read.csv(file = "Descargas/Ptos_muestras.csv", header=TRUE)
 #leaflet()%>%setView(lng = -67.591, lat = 10.240, zoom = 6)%>%addProviderTiles(providers$Esri.WorldImagery)
-leaflet(data = datos)%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
-
+leaflet(data = datos, width = 500 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
 ```
-
+</center></div>
 <br>
 La Figura 5. Expone la distribución espacial de las muestras de suelos con datos de indicadores de productividad y propiedades físicas y químicas. Las mismas fueron obtenidas a partir de las coordenadas proporcionadas por los países, transformadas y homologadas al sistema de coordenadas geográficas en grados decimal y datum WGS84.
 
