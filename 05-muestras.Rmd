@@ -9,7 +9,7 @@ library(rmarkdown)
 library(leaflet)
 datos <- read.csv(file = "Descargas/Ptos_muestras.csv", header=TRUE)
 #leaflet()%>%setView(lng = -67.591, lat = 10.240, zoom = 6)%>%addProviderTiles(providers$Esri.WorldImagery)
-leaflet(data = datos)%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI )%>%addProviderTiles(providers$Esri.WorldImagery)
+leaflet(data = datos)%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
 
 ```
 
