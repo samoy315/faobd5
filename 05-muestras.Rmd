@@ -11,10 +11,14 @@ library(leaflet)
 datos <- read.csv(file = "Descargas/Ptos_muestras_para_web.csv", header=TRUE)
 #leaflet()%>%setView(lng = -67.591, lat = 10.240, zoom = 6)%>%addProviderTiles(providers$Esri.WorldImagery)
 #leaflet(data = datos, width = 500 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery%>)
-leaflet(data = datos, width = 380 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, popup = ~FINCANOMB, label = ~MUESTRAID1, radius = 10, fill = TRUE, fillColor = "blue", fillOpacity = 0.3, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
+leaflet(data = datos, width = 500 )%>%addCircles(lng = ~MUESTLONG, lat = ~MUESTLATI, popup = ~FINCANOMB, label = ~MUESTRAID1, radius = 10, fill = TRUE, fillColor = "blue", fillOpacity = 0.3, color = "red" )%>%addProviderTiles(providers$Esri.WorldImagery)
 ```
+***Figura 5.** Distribuccion espacial de las muestras.*
 </center></div>
+
+
 <br>
+
 La Figura 5. Expone la distribución espacial de las muestras de suelos con datos de indicadores de productividad y propiedades físicas y químicas. Las mismas fueron obtenidas a partir de las coordenadas proporcionadas por los países, transformadas y homologadas al sistema de coordenadas geográficas en grados decimal y datum WGS84.
 
 **Observaciones:**
@@ -41,6 +45,6 @@ La Figura 5. Expone la distribución espacial de las muestras de suelos con dato
 
 <br>
 
-En conclusión se integraron 140 muestras de los 7 países, de las cuales 93 se observan correctas, pero solo representan 53 sitios geo-localizados.
+En conclusión se integraron 140 muestras de 7 países, de las cuales 93 se observan correctas, pero solo representan 53 sitios geo-localizados.
 
 ---
