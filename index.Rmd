@@ -29,4 +29,4 @@ I.  Niveles de abstracción en la estructura considerada para diseñar la Base d
 II. Integración y normalización de los datos sobre prácticas e indicadores aportados por Argentina, Colombia, Costa Rica, Nicaragua, Paraguay, Uruguay y Venezuela.
 III. Observaciones realizadas a los datos proporcionados por los diferentes países (Argentina, Colombia, Costa Rica, Nicaragua, Paraguay, Uruguay y Venezuela).
 IV. Diseño del diagrama Entidad - Relación de la Base de datos sobre prácticas de manejo sostenible y aguas (PMSSA) e indicadores.
-V. Análisis de condiciones de las muestras de suelos y su distribución espacial.
+V.  Análisis de condiciones de las muestras de suelos y su distribución espacial.
